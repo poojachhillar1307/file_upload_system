@@ -1,0 +1,29 @@
+<h2>My Uploaded Files</h2>
+
+<%= link_to "Upload New File", new_file_path, class: "btn btn-primary" %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>File</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @files.each do |file| %>
+      <tr>
+        <td><%= file.title %></td>
+        <td><%= file.description %></td>
+        <td>
+          <%= link_to "Download", rails_blob_path(file.file, disposition: "attachment"), class: "btn btn-info" %>
+        </td>
+        <td>
+          <%= link_to "Share", share_file_path(file), class: "btn btn-warning" %>
+          <%= link_to "Delete", file_path(file), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
