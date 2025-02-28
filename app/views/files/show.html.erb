@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h2>📁 File Details</h2>
+  
+  <p><strong>Title:</strong> <%= @file.title %></p>
+  <p><strong>Description:</strong> <%= @file.description.presence || "No description available" %></p>
+
+  <p>
+    <strong>Download:</strong>
+    <%= link_to "⬇ Download File", rails_blob_path(@file.file, disposition: "attachment"), class: "btn btn-primary" %>
+  </p>
+
+  <p>
+    <%= link_to "⬅ Back to Files", files_path, class: "btn btn-outline-secondary" %>
+  </p>
+</div>
