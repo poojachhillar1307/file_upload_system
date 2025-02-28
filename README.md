@@ -1,24 +1,18 @@
-# README
+# File Upload System::
+A simple and secure **file management system** built with **Ruby on Rails**, allowing users to **upload, download, share, and delete files** easily.  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Features :: 
+✔ **User Authentication** (Devise)  
+✔ **File Upload & Storage** (Active Storage)  
+✔ **File Listing & Download**  
+✔ **File Sharing via TinyURL**  
+✔ **Delete Uploaded Files**  
 
-Things you may want to cover:
+---
 
-* Ruby version
+##  Setup & Installation ::
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/file_upload_system.git
+cd file_upload_system
